@@ -1,1 +1,1 @@
-# AngularJS-site-info-collector
+# AngularJS collector
