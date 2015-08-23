@@ -1,1 +1,1 @@
-# AngularJS collector
+# AngularJS Content collector
