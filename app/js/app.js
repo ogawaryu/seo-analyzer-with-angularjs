@@ -1,1 +1,1 @@
-var app = angular.module('contentconllertor', []);
+var app = angular.module('contentModule', []);
