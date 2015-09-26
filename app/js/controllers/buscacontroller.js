@@ -1,7 +1,7 @@
-app.controller('buscaController', function ($scope) {
-
+app.controller('buscaController', function ($scope, buscaService) {
 	this.submit = function() {
-		// código aqui
+		buscaService.get($scope.formBusca.url.$modelValue).success(function(response) {
+			
+		});
 	};
-	
 });
