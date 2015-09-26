@@ -5,9 +5,11 @@ $json = json_decode(file_get_contents('php://input'));
 $html = file_get_html($json->url);
 
 $elementExtract = [];
-foreach($html->find('h1') as $element) {
-	$item['nome'] = trim($element->plaintext);
-	$elementExtract['h1'][] = $item;
+if($html){
+	foreach($html->find('h1') as $element) {
+		$item['nome'] = trim($element->plaintext);
+		$elementExtract['h1'][] = $item;
+	}
 }
 
 header('Content-Type: application/json');
