@@ -1,5 +1,5 @@
 app.service('buscaService', ['$http',function ($http) {
-	this.get = function(params) {
-		return $http.get("/busca.php");
+	this.post = function(params) {
+		return $http.post("/busca.php", params);
 	}
 }]);
