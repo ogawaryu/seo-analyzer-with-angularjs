@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="contentModule">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,12 @@
 	<link rel="stylesheet" href="/css/default.css">
 </head>
 <body>
-	<div class="container" ng-app="contentModule">
+	<div class="container" ng-controller="buscaController as busca">
 		<!-- Campo de busca -->
 		<div class="row">
 			<div class="col-md-8 center-block">
 				<h5>Digite a url para mapear e coletar os dados:</h5>
-				<form class="form-busca" name="formBusca" ng-controller="buscaController as busca" ng-submit="busca.submit()">
+				<form class="form-busca" name="formBusca"  ng-submit="busca.submit()">
 					<div class="alert alert-danger" ng-show="formBusca.url.$dirty && formBusca.url.$error.required" >
 						<p>Esse campo é obrigátorio.</p>
 					</div>
@@ -39,23 +39,17 @@
 		</div>
 
 		<hr class="divider">
-
 		<!-- Tabela com dados -->
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>H1</th>
+					<th>Total: {{h1Tags.length}}</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Titulo 1</td>
-				</tr>
-				<tr>
-					<td>Titulo 2</td>
-				</tr>
-				<tr>
-					<td>Titulo 3</td>
+				<tr ng-repeat="tag in h1Tags">
+					<td colspan="2">{{tag.nome}}</td>
 				</tr>
 			</tbody>
 		</table>
