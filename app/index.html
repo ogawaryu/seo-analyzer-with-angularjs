@@ -16,10 +16,10 @@
 	<link rel="stylesheet" href="/css/default.css">
 </head>
 <body>
-	<div class="container" ng-controller="buscaController as busca">
-		<!-- Campo de busca -->
-		<div class="row">
-			<div class="col-md-8 center-block">
+	<div class="container">
+		<div class="jumbotron" ng-controller="buscaController as busca">
+			<!-- Campo de busca -->
+			<div class="well">
 				<h5>Digite a url para mapear e coletar os dados:</h5>
 				<form class="form-busca" name="formBusca"  ng-submit="busca.submit()">
 					<div class="alert alert-danger" ng-show="formBusca.url.$dirty && formBusca.url.$error.required" >
@@ -35,27 +35,29 @@
 						</div>
 					</div>
 				</form>
+				
+				<div class="text-center">
+					<img src="/image/ajax-loader.gif" ng-src="/image/ajax-loader.gif" ng-show="loading">
+				</div>
 			</div>
-			<div class="col-md-1 center-block">
-				<img src="/image/ajax-loader.gif" ng-src="/image/ajax-loader.gif" ng-show="loading">
-			</div>
-		</div>
 
-		<hr class="divider">
-		<!-- Tabela com dados -->
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>H1</th>
-					<th>Total: {{h1Tags.length}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="tag in h1Tags">
-					<td colspan="2">{{tag.nome}}</td>
-				</tr>
-			</tbody>
-		</table>
+			<hr class="divider">
+
+			<!-- Tabela com dados -->
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>H1</th>
+						<th>Total: {{h1Tags.length}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in h1Tags">
+						<td colspan="2">{{tag.nome}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
