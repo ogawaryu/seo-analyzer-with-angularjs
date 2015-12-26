@@ -9,7 +9,7 @@ app.controller('buscaController', function ($scope, buscaService) {
 
 		buscaService.post({'url' : $scope.formBusca.url.$modelValue})
 			.success(function(response) {
-				$scope.h1Tags = response.h1;
+				$scope.tags = response;
 			})
 			.finally(function () {
 				$scope.loading = false;

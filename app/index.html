@@ -12,6 +12,25 @@
 	<script src="/js/services/buscaservice.js" type="text/javascript"></script>
 	<script src="/js/controllers/buscacontroller.js" type="text/javascript"></script>
 
+	<!-- Google Chart -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("visualization", "1", {packages:["corechart"]});
+		google.setOnLoadCallback(function() {
+			var data = google.visualization.arrayToDataTable([
+				['Task', 'Hours per Day'],
+				['Work',     11],
+				['Eat',      2],
+				['Commute',  2],
+				['Watch TV', 2],
+				['Sleep',    7]
+			]);
+			var options = { title: 'Total de headings' };
+			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+			chart.draw(data, options);
+		});
+	</script>
+
 	<link rel="stylesheet" href="/lib/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/default.css">
 </head>
@@ -43,20 +62,27 @@
 
 			<hr class="divider">
 
-			<!-- Tabela com dados -->
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>H1</th>
-						<th>Total: {{h1Tags.length}}</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in h1Tags">
-						<td colspan="2">{{tag.nome}}</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row">
+				<div class="col-md-8">
+					<div id="piechart" style="height: 500px;"></div>		
+				</div>
+				<div class="col-md-4">
+					<!-- Tabela com dados -->
+					<table class="table table-striped" ng-repeat="tag in tags">
+						<thead>
+							<tr>
+								<th>{{tag.heading | uppercase}}</th>
+								<th>Total: {{tag.values.length}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="value in tag.values">
+								<td colspan="2">{{value.titulo}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
