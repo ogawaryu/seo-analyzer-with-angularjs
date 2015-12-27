@@ -1,1 +1,1 @@
-var app = angular.module('contentModule', []);
+var app = angular.module('contentModule', ['googlechart']);
