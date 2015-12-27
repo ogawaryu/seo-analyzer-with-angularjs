@@ -1,6 +1,6 @@
 # AngularJS Content collector
 
-Sistema simples para mapear tags html e coletar conteúdo.
+Sistema simples em AngularJS para mostrar gráficos e conteúdo em tabela.
 
 Terceira fase:
 ![Alt text](https://github.com/ogawaryu/angularjs-content-collector/blob/master/exemplo/terceira_fase.png "Optional title")
