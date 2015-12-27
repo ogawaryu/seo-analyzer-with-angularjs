@@ -1,4 +1,4 @@
-# AngularJS Content App
+# AngularJS Content and Chart Application
 
 Sistema simples em AngularJS para mostrar gráficos e conteúdo em tabela.
 
