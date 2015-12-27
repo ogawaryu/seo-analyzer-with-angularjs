@@ -1,4 +1,4 @@
-# AngularJS Content collector
+# AngularJS Content App
 
 Sistema simples em AngularJS para mostrar gráficos e conteúdo em tabela.
 
