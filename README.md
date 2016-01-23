@@ -1,6 +1,7 @@
 # AngularJS Content and Chart Application
 
-Sistema simples em AngularJS para mostrar gráficos e conteúdo em tabela.
+Ferramenta simples de SEO análise para seus sites. 
+O SEO ANALYZER ajuda na otimização do seu site com simplicidade e rapidez.
 
 Terceira fase:
 ![Alt text](https://github.com/ogawaryu/angularjs-content-collector/blob/master/exemplo/terceira_fase.png "Optional title")
