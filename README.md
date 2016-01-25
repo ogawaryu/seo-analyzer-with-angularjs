@@ -3,6 +3,9 @@
 Ferramenta simples de SEO análise para seus sites. 
 O SEO ANALYZER ajuda na otimização do seu site com simplicidade e rapidez.
 
+Quarta fase:
+![Alt text](https://github.com/ogawaryu/angularjs-content-collector/blob/master/exemplo/quarta_fase.png "Quarta Fase")
+
 Terceira fase:
 ![Alt text](https://github.com/ogawaryu/angularjs-content-collector/blob/master/exemplo/terceira_fase.png "Optional title")
 

@@ -8,13 +8,14 @@ app.controller('buscaController', function ($scope, buscaService) {
 		$scope.loading = true;
 
 		buscaService.post({'url' : $scope.formBusca.url.$modelValue}).success(function(response) {
-			$scope.tags = response;
+			$scope.head = response.head;
+			$scope.tags = response.Headings;
 
 			$scope.chartObject = {};
 			$scope.chartObject.type = "PieChart";
 
 			var data = [];
-			angular.forEach(response, function(el, key) {
+			angular.forEach(response.Headings, function(el, key) {
 				data.push({c: [ {v: el.heading }, {v: el.values.length }]});
 			});
 			

@@ -45,6 +45,22 @@
 			</div>
 
 			<hr class="divider">
+			<!-- List Informações Gerais -->
+			<ul class="list-group" ng-show="head">
+				<li class="list-group-item active">Informações gerais</li>
+				<li class="list-group-item">
+					<h6><strong>Título:</strong> {{head.title.nome}}
+					<span class="glyphicon glyphicon-info-sign"></span>
+					<small>Tag título com 10 a 70 catacteres.</small>
+					</h6>
+				</li>
+				<li class="list-group-item">
+					<h6><strong>Descrição:</strong> {{head.description.content}}
+					<span class="glyphicon glyphicon-info-sign"></span>
+					<small>Descrição de meta 70 a 160.</small>
+					</h6>
+				</li>
+			</ul>
 
 			<!-- Google Chart -->
 			<div google-chart chart="chartObject" id="google-pie"></div>
