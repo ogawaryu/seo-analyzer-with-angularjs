@@ -1,0 +1,10 @@
+{
+  "version": "0.0.1",
+  "description": "SEO Analyzer with AngularJS",
+  "main": "gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib": "^0.11.0",
+    "grunt-contrib-imagemin": "^1.0.0"
+  }
+}
